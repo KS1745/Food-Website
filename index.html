@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .img{
+            width:1284px;
+            height:292px;
+        }
+        .img1{
+            
+            height:360px;
+        }
+        .btn{
+            z-index: 0;
+        }
+        .btn::before{
+            content:"";
+            background-color:red;
+            position: absolute;
+            top:0;
+            right:0;
+            left:0;
+            bottom: 0;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: all 0.8s;
+            z-index: -1;
+            
+
+        }
+        .btn:hover::before{
+            transform: scaleX(1);
+        }
+
+        .img2{
+            position: relative;
+            z-index: 0;
+        }
+        .img2::after{
+            content:"Fruit";
+            opacity: 0;
+            color: white;
+            background: rgba(0,0,0,0.871);
+            position:absolute;
+            top:0;
+            right:0;
+            left:0;
+            bottom: 0;
+            transform-origin: bottom;
+            transform:scaleY(0);
+            transition:all 1s;
+            z-index: 1;
+            font-weight: bold;
+            font-size: xx-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            
+        }
+        .img2:hover::after{
+            transform:scaleY(1);
+            opacity: 1;
+        }
+
+        .img3{
+            position: relative;
+            z-index: 0;
+        }
+        .img3::after{
+            content:"Vegetable";
+            opacity: 0;
+            color: white;
+            background: rgba(0,0,0,0.871);
+            position:absolute;
+            top:0;
+            right:0;
+            left:0;
+            bottom: 0;
+            transform-origin: top;
+            transform:scaleY(0);
+            transition:all 1s;
+            z-index: 1;
+            font-weight: bold;
+            font-size: xx-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            
+        }
+        .img3:hover::after{
+            transform:scaleY(1);
+            opacity: 1;
+        }
+
+        .img4{
+            position: relative;
+            z-index: 0;
+        }
+        .img4::after{
+            content:"Grain";
+            opacity: 0;
+            color: white;
+            background: rgba(0,0,0,0.871);
+            position:absolute;
+            top:0;
+            right:0;
+            left:0;
+            bottom: 0;
+            transform-origin: bottom;
+            transform:scaleY(0);
+            transition:all 1s;
+            z-index: 1;
+            font-weight: bold;
+            font-size: xx-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            
+        }
+        .img4:hover::after{
+            transform:scaleY(1);
+            opacity: 1;
+        }
+        .img5{
+            height:133px;
+            width:150px;
+           
+        }
+        .img6{
+            height:100px;
+            width:150px;
+            border-radius: 50%;
+            object-position: center;
+            object-position: cover;
+        }
+        .img7{
+            width:568px;
+            height:409px;
+        }
+        .about{
+            transform: translateX(100%);
+            animation: about-img-animation 1s ease-in-out forwards;
+        }
+
+        @keyframes about-img-animation {
+    100%{
+        transform: translate(0);
+    }
+}
+
+        
+
+    </style>
+</head>
+<body>
+
+    <nav class="w-full flex justify-around items-center p-2  shadow-lg ">
+        <div class="font-bold text-4xl text-red-600">
+            <p>FoodWeb</p>
+        </div>
+        <div class="flex gap-5 text-xl text-red-600 font-semibold ">
+           <a href="#Home" class="hover:text-white duration-500 hover:bg-gray-500 p-2">Home</a>
+           <a href="#About" class="hover:text-white hover:bg-gray-500 p-2  duration-500">About</a>
+           <a href="#Category" class="hover:text-white hover:bg-gray-500 p-2 duration-500">Category</a>
+           <a href="#Menu" class="hover:text-white hover:bg-gray-500 p-2 duration-500">Menu</a>
+           <a href="#Testimonials" class="hover:text-white hover:bg-gray-500 p-2 duration-500">Testimonials</a>
+            <a href="#Contact" class="hover:text-white hover:bg-gray-500 p-2 duration-500">Contact</a>
+        </div>
+        
+    </nav>
+      
+    <div class="max-w-[1284px] max-h-[292px] ">
+        <div>
+            <img src="./images/wood-chopsticks-old-marble-space_66899-469.avif" class="img">
+        </div>
+        <div class="absolute top-32 left-[475px]  flex flex-col justify-center items-center mx-auto gap-2 ">
+            <h1 class="font-bold text-3xl text-red-500">EAT RIGHT FOOD</h1>
+            <p class="text-base text-white">Eat Healthy food, it is good for your heal</p>
+            <button class="bg-green-600 p-2 relative  text-white w-32 mt-2 btn ">MENU</button>
+            
+        </div>
+        
+        
+            
+        
+    </div>
+    
+    <div class="max-w-[1284px] ">
+       
+        <div class="max-w-[1137px] max-h-[360px]  mx-auto flex justify-around mt-5 shadow-xl relative about">
+            
+            <div class="flex flex-col gap-3">
+                <p class="text-lg text-red-500">About us</p>
+                <p class="font-bold text-4xl max-w-[650px]">We've been making healthy food for last 10 years</p>
+                <p class="max-w-[550px] text-base">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi distinctio minima reprehenderit accusamus vel labore molestias deserunt, dolorum fuga temporibus, dicta inventore recusandae, at odit earum ipsum eveniet corporis obcaecati. Quas eius, maxime atque sapiente ipsum necessitatibus earum eligendi qui.</p>
+            </div>
+            <div class="overflow-hidden">
+                <img src="./images/istockphoto-1313307173-612x612.jpg" class="img1 hover:scale-105 duration-500 cursor-pointer   ">
+            </div>
+
+            
+            
+        </div>
+
+    </div>
+
+    <div>
+        <h1 class="text-center font-bold text-4xl mt-5">TYPES OF FOOD</h1>
+    </div>
+    
+    <div class="grid grid-cols-3 max-w-[1137px] mx-auto mt-5">
+       <div class="img2  max-w-[360px] max-h-[270px]" >
+        <img src="./images/food1.jpg" width="360px" class="img2 cursor-pointer" >
+       </div> 
+       <div class="img3  max-w-[360px] max-h-[270px]">
+        <img src="./images/food2.jpg" width="360px" class="img3 cursor-pointer">
+       </div>
+       <div class="img4  max-w-[360px] max-h-[270px]" >
+        <img src="./images/food3.jpg" width="360px" class="img4 cursor-pointer">
+        </div>
+        
+    </div>
+
+    <div>
+        <h1 class="text-center font-bold text-4xl mt-5">FOOD MENU</h1>
+    </div>
+
+    <div class="max-w-[1137px] mx-auto mt-5 flex justify-evenly">
+        <div class="flex flex-row gap-2 items-center">
+            <img src="./images/food-menu1.jpg"  class="img5 rounded-[50%] object-center object-cover hover:scale-105 duration-500 cursor-pointer">
+            <div class="flex flex-col ">
+                <h1 class="font-bold">Food Menu Item 1</h1>
+                <p class="max-w-[350px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, adipisci!</p>
+                <p class="text-green-600 hover:text-red-600 cursor-pointer">Price: ₹ 250</p>
+            </div>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+            <img src="./images/food-menu2.jpg"  class="img5 rounded-[50%] object-center object-cover hover:scale-105 duration-500 cursor-pointer">
+            <div class="flex flex-col ">
+                <h1 class="font-bold">Food Menu Item 2</h1>
+                <p class="max-w-[350px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, adipisci!</p>
+                <p class="text-green-600 hover:text-red-600 cursor-pointer">Price: ₹ 350</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-[1137px] mx-auto mt-5 flex justify-evenly">
+        <div class="flex flex-row gap-2 items-center">
+            <img src="./images/food-menu3.jpg"   class="img5 rounded-[50%] object-center object-cover hover:scale-105 duration-500 cursor-pointer">
+            <div class="flex flex-col ">
+                <h1 class="font-bold">Food Menu Item 3</h1>
+                <p class="max-w-[350px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, adipisci!</p>
+                <p class="text-green-600 hover:text-red-600 cursor-pointer">Price: ₹ 450</p>
+            </div>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+            <img src="./images/food-menu4.jpg"  class="img5 rounded-[50%] object-center object-cover hover:scale-105 duration-500 cursor-pointer">
+            <div class="flex flex-col ">
+                <h1 class="font-bold">Food Menu Item 4</h1>
+                <p class="max-w-[350px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, adipisci!</p>
+                <p class="text-green-600 hover:text-red-600 cursor-pointer">Price: ₹ 550</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-[1137px] mx-auto mt-5 flex justify-evenly">
+        <div class="flex flex-row gap-2 items-center">
+            <img src="./images/food-menu5.jpg"   class="img5 rounded-[50%] object-center object-cover hover:scale-105 duration-500 cursor-pointer">
+            <div class="flex flex-col ">
+                <h1 class="font-bold">Food Menu Item 5</h1>
+                <p class="max-w-[350px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, adipisci!</p>
+                <p class="text-green-600 hover:text-red-600 cursor-pointer">Price: ₹ 450</p>
+            </div>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+            <img src="./images/food-menu6.jpg"  class="img5 rounded-[50%] object-center object-cover hover:scale-105 duration-500 cursor-pointer">
+            <div class="flex flex-col ">
+                <h1 class="font-bold">Food Menu Item 6</h1>
+                <p class="max-w-[350px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, adipisci!</p>
+                <p class="text-green-600 hover:text-red-600 cursor-pointer">Price: ₹ 550</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-[1263px] h-[800px] bg-gray-200 mt-10 ">
+        <h1 class="text-center font-bold text-3xl pt-3">What our Customers Says</h1>
+        
+        <div class="max-w-[1137px] mx-auto flex flex-row gap-4 items-center justify-center mt-5">
+            <div class="flex flex-col gap-1 justify-center items-center ">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="max-w-5xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque ratione officia praesentium voluptates eveniet id.</p>
+                <img src="./images/male-photo1.jpg" class="img6">
+            </div>
+            <div class="flex flex-col gap-1 justify-center items-center ">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="max-w-5xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque ratione officia praesentium voluptates eveniet id.</p>
+                <img src="./images/male-photo2.jpg" class="img6">
+            </div>
+            <div class="flex flex-col gap-1 justify-center items-center ">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="max-w-5xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque ratione officia praesentium voluptates eveniet id.</p>
+                <img src="./images/male-photo3.jpg" class="img6">
+            </div>
+        </div>
+        <div class="max-w-[1137px] bg-white mx-auto mt-10 flex">
+            <div class="max-w-[568px]  ">
+                <img src="./images/restraunt-image.jpg" class="img7">
+             </div>
+            <form class="max-w-[568px] flex flex-col gap-2">
+                    <h1 class="font-bold text-2xl">Contact Us</h1>
+                    <input type="text" name="" id="" placeholder="Name">
+                    <hr>
+                    <input type="email" name="" id="" placeholder="E-mail">
+                    <hr>
+                    <textarea name="" id="" cols="60" rows="10">Type Your Message Here</textarea>
+                    <button class="bg-green-600 w-20 rounded-3xl p-2 hover:bg-red-500 duration-500 hover:text-white">Submit</button>
+            </form>
+        </div>
+
+        
+    </div>
+
+    <div class="max-w-[1263px] h-[90px] bg-gray-800 ">
+        <p class="font-bold text-2xl text-center pt-4 text-white">Restaurant Website © all rights reserved</p>
+    </div>
+
+    
+    
+        
+
+</body>
+</html>
